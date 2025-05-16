@@ -4,61 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kennemerland Surveillance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: white;
       margin: 0;
-      padding: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: white;
     }
     header {
-      background-color: #1e88e5;
-      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
       text-align: center;
+      animation: fadeIn 1.5s ease;
     }
     header h1 {
       margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
     nav {
-      text-align: center;
-      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(30, 136, 229, 0.8);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      margin: 0 15px;
-      color: #fff;
+      color: white;
       text-decoration: none;
+      margin: 0 20px;
       font-weight: bold;
+      transition: transform 0.3s;
+    }
+    nav a:hover {
+      transform: scale(1.1);
     }
     section {
-      padding: 30px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
+      animation: fadeIn 1s ease-in;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-left: 5px solid #1e88e5;
+      transition: background-color 0.3s;
+    }
+    ul li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
     .button {
       background-color: #1e88e5;
-      border: none;
-      padding: 12px 24px;
+      padding: 14px 30px;
       color: white;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 20px;
-      border-radius: 5px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
       text-decoration: none;
       display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #1565c0;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1e88e5;
-      margin-top: 40px;
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav a { margin: 0 10px; }
+      .button { width: 100%; text-align: center; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Kennemerland Surveillance</h1>
-    <p>Een realistische Roblox surveillance roleplay game</p>
+    <p>De realistischste Roblox surveillance roleplay van Nederland</p>
   </header>
 
   <nav>
@@ -69,29 +121,31 @@
 
   <section id="over">
     <h2>Over het spel</h2>
-    <p>Kennemerland Surveillance is een realistische roleplay game op Roblox waarbij spelers kunnen deelnemen aan verschillende hulpdiensten zoals Politie, Brandweer, Ambulance en Marechaussee. Speel mee in een spannende wereld gebaseerd op de regio Kennemerland!</p>
-    <a href="https://www.roblox.com" class="button" target="_blank">Speel op Roblox</a>
+    <p>Kennemerland Surveillance is een realistische roleplay game in Roblox, geïnspireerd op de hulpdiensten in de regio Kennemerland. Word onderdeel van spannende situaties, verkeerscontroles, incidenten en meer.</p>
+    <a href="https://www.roblox.com" target="_blank" class="button">Speel de game</a>
   </section>
 
   <section id="diensten">
-    <h2>Diensten in het spel</h2>
+    <h2>Diensten</h2>
     <ul>
-      <li>🚔 Politie Kennemerland</li>
-      <li>🚒 Brandweer Kennemerland</li>
-      <li>🚑 Ambulance Kennemerland</li>
-      <li>🪖 Koninklijke Marechaussee</li>
+      <li>🚓 Politie Eenheid Kennemerland</li>
+      <li>🚒 Veiligheidsregio Kennemerland (Brandweer)</li>
+      <li>🚑 Ambulance Noord-Holland</li>
+      <li>🪖 Koninklijke Marechaussee Schiphol</li>
       <li>📞 Meldkamer Noord-Holland</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Heb je vragen of wil je meedoen? Neem contact op via Discord:</p>
-    <p><strong>Discord server:</strong> <a href="https://discord.gg/jouwserver" target="_blank" class="button">Join onze Discord</a></p>
+    <p>Heb je interesse om mee te doen of wil je je aanmelden als medewerker?</p>
+    <p><strong>Discord server:</strong></p>
+    <a href="https://discord.gg/CqgYcHrg8P" class="button" target="_blank">Join onze Discord</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Kennemerland Surveillance. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 Kennemerland Surveillance. Gemaakt met passie voor roleplay.</p>
   </footer>
+
 </body>
 </html>
